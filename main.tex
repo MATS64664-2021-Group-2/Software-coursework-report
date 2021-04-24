@@ -148,7 +148,7 @@ To measure the two last factors, parameters as the Radial Hydride Fraction (RHF)
     \label{fig:my_label}
 \end{figure}
 
-\subsection{Parameter calculations}
+\subsection{Parameters calculation}
 
 
 \noindent
@@ -162,7 +162,7 @@ RHF corresponds to the weight average of hydride length multiplied by a weightin
 
 
 \noindent
-Where $L_i$ is the length of each hydride and $f_i$ is the weighting factor, a parameter that has different values depending on the hydrides orientation. Hydrides with orientations between $0^0-40^0$ to the transverse direction have a $f_i$ of 0, when the orientation is between $40^0$ and $65^0$, the $f_i$ is 0.5, and hydrides with an orientation of $65–90^0$ have a $f_i$ of 1 \cite{COLAS2013586}. 
+Where $L_i$ is the length of each hydride and $f_i$ is the weighting factor, a parameter that has different values depending on the hydrides orientation. Hydrides with orientations between 0-40° to the transverse direction have a $f_i$ of 0, when the orientation is between 40° and 65°, the $f_i$ is 0.5, and hydrides with an orientation of 65–90° have a $f_i$ of 1 \cite{COLAS2013586}. 
 
 \noindent
 To calculate the HCC, a rectangular area in the micrograph of the alloy is separated, and the length of each radial hydride in that area is measured. The formula applied is shown below:
@@ -191,6 +191,32 @@ Where $L_i$ is the length of each radial hydride within the 150 µm of arc lengt
 
 \subsection{Limitations of each parameter}
 
+\noindent
+The problem of the RHF is that it does not differentiate between hydrides oriented within the ranges 0-40°, 40-65°, and 65-90° \cite{SIMON2021152817}. Thus, microstructures with different radial hydrides orientations can have the same $f_i$, which will lead to obtain the same value of RHF.
+
+\noindent
+On its part, the continuity factors do not differentiate some situations either. For example, the HCC is the same in the three situations illustrated in Figure 2, which certainly facilitate the cracking propagation to different extents. In Figure 3 it can be seen that two different situations entail the same value of RHCF and, on the contrary, Figure 4 shows how two equivalent situations may lead to different values of RHCF \cite{SIMON2021152817}.
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+    \centering
+    \includegraphics[width=4.5in]{HCC comparison.png}
+    \caption{Radial-oriented hydrides differently located but with the same HCC value.}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+    \centering
+    \includegraphics[width=4.5in]{RHCF comparison 1.png}
+    \caption{Radial-oriented hydrides with the same RHCF value but different connectivity.}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+    \centering
+    \includegraphics[width=4.5in]{RHCF comparison 2.png}
+    \caption{Radial-oriented hydrides with the different RHCF value but the same connectivity.}
+    \label{fig:my_label}
+\end{figure}
 
 
 %========= Literature review
