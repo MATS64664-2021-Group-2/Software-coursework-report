@@ -6,11 +6,10 @@
 RHF corresponds to the weight average of hydride length multiplied by a weighting factor. The formula employed is described below:
 
 
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-    \raggedleft
-    \includegraphics[width=4.5in]{Figures/2-Parameters/RHF.JPG}
-    \label{fig:my_label}
-\end{figure}
+\begin{equation} \label{RHF_eqn}
+RHF =  \frac{\sum_i L_i f_i }
+            {\sum_i L_i}
+\end{equation}
 
 
 \noindent
@@ -19,24 +18,21 @@ Where $L_i$ is the length of each hydride and $f_i$ is the weighting factor, a p
 \noindent
 To calculate the HCC, a rectangular area in the micrograph of the alloy is separated, and the length of each radial hydride in that area is measured. The formula applied is shown below:
 
+\begin{equation} \label{HCC_eqn}
+HCC =  \frac{HC_1 + HC_2 + HC_3... }
+            {L}
+\end{equation}
 
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-    \raggedleft
-    \includegraphics[width=4.3in]{Figures/2-Parameters/HCC.JPG}
-    \label{fig:my_label}
-\end{figure}
 \noindent
 Where $HC_i$ is the length of each radial hydride and L is the height of the selected rectangle to measure \cite{SIMON2021152817}.
 
 \noindent
 To calculate the RHCF, the length of each radial hydride in a section of the cladding is measured. This time, the section will have a length of 150 µm along the arc length of the cladding, and the width will be all the cladding thickness. The formula applied in this case is:
 
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-    \raggedleft
-    \includegraphics[width=4.5in]{Figures/2-Parameters/RHCF.JPG}
-    \label{fig:my_label}
-\end{figure}
-
+\begin{equation} \label{RHCF_eqn}
+RHCF =  \frac{max (L_1 + L_2 + L_3...) }
+            {h_m}
+\end{equation}
 
 \noindent
 Where $L_i$ is the length of each radial hydride within the 150 µm of arc length, and $h_m$ is the cladding thickness \cite{SIMON2021152817}.
