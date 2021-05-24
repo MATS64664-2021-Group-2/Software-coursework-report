@@ -25,7 +25,21 @@ o	Gauss thresholding
     \item \textbf{Connectivity of microstructure.}
 In this section, the connectivity between hydrides in the radial direction is checked and the edges are detected to discover the contours within the slices. With this information, the HCC parameter of each strip is measured, and finally the average HCC value is obtained for each of the three thresholding methods.
 
-    \item \textbf{Testing the code.}
+    \item \textbf{Testing of functions.}
+Testing the code in each function allows for a more robust execution of the code by integrating and automating the test procedure. Example micrographs created and modified with known will enable us to know what outputs to expect for each function's input. Comparing the similarity of images gives us a pass or fail criteria.\par
+
+Description of test methods:
+        \begin{itemize}
+            \item Thresholding
+            \item Connectivity
+            \item Loading
+            \item Parameters
+            \item Plot
+            \item Processing
+        \end{itemize}
+
+By anticipating how the end-user might use the code and its environment, testing decreases the likelihood of unexpected errors. 
+
 
 
 \end{enumerate}
