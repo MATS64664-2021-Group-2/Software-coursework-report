@@ -40,12 +40,12 @@ There are not prerequisites for this repository.
    ```sh
    git clone https://github.com/MATS64664-2021-Group-2/Software-coursework-report.git
    ```
-2. Zip the repository folder.
+2. Zip the repository folder:
     
     Select the folder --> Right-click on the folder --> 7-Zip --> Add to archive...
 
-3. From Overleaf, upload this zipped folder 
+3. From Overleaf, upload this zipped folder.
 
-5. Compile to see the report
+5. Compile to see the report.
 
             
