@@ -43,6 +43,8 @@ There are not prerequisites for this repository.
     
     Select the folder --> Right-click on the folder --> 7-Zip --> Add to archive...
 
-3. From Overleaf, upload this zipped folder and compile it to see the report
+3. From Overleaf, upload this zipped folder 
+
+5. Compile to see the report
 
             
