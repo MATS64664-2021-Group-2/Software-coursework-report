@@ -5,7 +5,7 @@ https://www.overleaf.com/project/605c7f4f07b963c175e28542
 
 - [Aim of the project](#aim-of-the-project)
 - [Description of the project](#description-of-the-project)
-- [Folders and documents:](#folders_and_documents)
+- [Folders and files](#folders-and-files)
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
 
@@ -17,7 +17,7 @@ Characterize hydride connectivity in Zr alloys.
 Hydrides are a major concern in Zr alloys due to their embrittling effect. Characterizing their connectivity would allow for the creation of tougher Zr alloys for nuclear applications. The project consists of loading up existing micrographs of Zr alloy microstructures, binarizing them using thresholding (otsu, k-means and adaptive Gauss thresholding) and devising a method to study their connectivity. The project is carried out using Python language and GitHub for sharing.
 
 
-## Folders and documents:
+## Folders and files:
 
 - **Figures** -->  In this folder you can find the figures used in the report.
 
@@ -28,6 +28,7 @@ Hydrides are a major concern in Zr alloys due to their embrittling effect. Chara
 - **Full report.tex** --> This is the main file of the report from which all the sections are called.
 
 - **Bibliography.bib** --> This file contains all the references that are cited on the report.
+
 
 ## Prerequisites:
 
