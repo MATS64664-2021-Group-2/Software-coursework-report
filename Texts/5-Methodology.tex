@@ -18,10 +18,25 @@ In this part of the code, the images to analyse are loaded.
 Because of the large area of the images being analysed, there are shadows that may lead us to incorrect results. To solve this, here it is included some code to break the image into vertical grayscale strips. The strips are also blurred and saved in their own directories.
 
     \item \textbf{Thresholding.}
-In this part, the grayscale and blurred strips are transformed into binary images and three different thresholding methods are applied to see which one offers the best result.
-o	Otsu thresholding
-o	K-means thresholding
-o	Gauss thresholding
+In this part, the grayscale and blurred strips are transformed into binary images and three different thresholding methods are applied to see which one offers the best result:
+
+\begin{itemize}
+\item \textbf{Otsu thresholding}
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{K-means thresholding}
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{Thresholding - Gaussian}
+\end{itemize}
+
+Adaptive Gaussian thresholding was applied to binarize the image. Adaptive means that the levels for each thresholded pixel were chosen based on the surrounding pixels, in order to adapt the thresholding according to different levels of illumination or contrast on the image. Unfortunately, due to the complexity of the images and very different illumination conditions across the whole sample size, the result from adaptive Gaussian thresholding was extremely noisy and therefore, unsuitable for HCC analysis.
+
+To mitigate this, erosion and dilation treatments were employed (provided by OpenCV), as well as area-based thresholding (removed an isolated island of pixels below a specified area threshold) (provided by skimage). Both methods were also combined for the sake of comparison. An example of what was obtained is shown in Figure X.
+
+Based on qualitative analysis, the erosion and dilation treatment did very little on its own to improve the presence of noise on the binarized micrographs. The area-based thresholding had far greater success, with the connected hydride structures present in the original images becoming more clearly visible. Combining both treatments offered an improvement for images with more initial noise, but removed long hydrides for images with less initial noise. At this time, a method has not been developed that uses the best method for the appropriate image. Therefore, for any set of images, the method would have to be chosen qualitatively for each image. Hence, this method is too inconsistent to be considered useful for HCC analysis. 
 
     \item \textbf{Connectivity of microstructure.}
 In this section, the connectivity between hydrides in the radial direction is checked and the edges are detected to discover the contours within the slices. With this information, the HCC parameter of each strip is measured, and finally the average HCC value is obtained for each of the three thresholding methods.
@@ -39,15 +54,7 @@ Description of test methods:
             \item Processing
         \end{itemize}
 
-\subsection{Thresholding - Gaussian}
 
-Adaptive Gaussian thresholding was applied to binarize the image. Adaptive means that the levels for each thresholded pixel were chosen based on the surrounding pixels, in order to adapt the thresholding according to different levels of illumination or contrast on the image. Unfortunately, due to the complexity of the images and very different illumination conditions across the whole sample size, the result from adaptive Gaussian thresholding was extremely noisy and therefore, unsuitable for HCC analysis.
-
-To mitigate this, erosion and dilation treatments were employed (provided by OpenCV), as well as area-based thresholding (removed an isolated island of pixels below a specified area threshold) (provided by skimage). Both methods were also combined for the sake of comparison. An example of what was obtained is shown in Figure X.
-
-Based on qualitative analysis, the erosion and dilation treatment did very little on its own to improve the presence of noise on the binarized micrographs. The area-based thresholding had far greater success, with the connected hydride structures present in the original images becoming more clearly visible. Combining both treatments offered an improvement for images with more initial noise, but removed long hydrides for images with less initial noise. At this time, a method has not been developed that uses the best method for the appropriate image. Therefore, for any set of images, the method would have to be chosen qualitatively for each image. Hence, this method is too inconsistent to be considered useful for HCC analysis. 
-
-\subsection{Testing}
 
 For Gaussian thresholding, two tests were created:
 
