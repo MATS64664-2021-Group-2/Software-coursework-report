@@ -39,33 +39,14 @@ To mitigate this, erosion and dilation treatments were employed (provided by Ope
 Based on qualitative analysis, the erosion and dilation treatment did very little on its own to improve the presence of noise on the binarized micrographs. The area-based thresholding had far greater success, with the connected hydride structures present in the original images becoming more clearly visible. Combining both treatments offered an improvement for images with more initial noise, but removed long hydrides for images with less initial noise. At this time, a method has not been developed that uses the best method for the appropriate image. Therefore, for any set of images, the method would have to be chosen qualitatively for each image. Hence, this method is too inconsistent to be considered useful for HCC analysis. 
 
     \item \textbf{Connectivity of microstructure.}
-In this section, the connectivity between hydrides in the radial direction is checked and the edges are detected to discover the contours within the slices. With this information, the HCC parameter of each strip is measured, and finally the average HCC value is obtained for each of the three thresholding methods.
+In this section, the connectivity between hydrides in the radial direction and the edges are detected to discover the contours within the slices. With this information, the HCC parameter of each strip is measured, and finally the average HCC value is obtained for each of the three thresholding methods.
 
     \item \textbf{Testing of functions.}
-Testing the code in each function allows for a more robust execution of the code by integrating and automating the test procedure. Example micrographs created and modified with known will enable us to know what outputs to expect for each function's input. Comparing the similarity of images gives us a pass or fail criteria.\par
+Testing the code in each function allows for a more robust execution of the code by integrating and automating the test procedure. Example micrographs created and modified with known will enable us to know what outputs to expect for each function's input. Comparing the similarity of images gives us a pass or fail criteria.By anticipating how the end-user might use the code and its environment, testing decreases the likelihood of unexpected errors. \par
 
 Description of test methods:
-        \begin{itemize}
-            \item Thresholding
-            \item Connectivity
-            \item Loading
-            \item Parameters
-            \item Plot
-            \item Processing
-        \end{itemize}
 
-
-
-For Gaussian thresholding, two tests were created:
-
-1. Tests whether after each treatment the input image and the output image had at least a 95\% similarity in terms of the image arrays. The test(s) was made to quickly determine whether a treatment (or its chosen parameters) had a large enough effect on the image to be considered useful.
-
-2. After the initial adaptive Gaussian thresholding, each pixel of the image was analyzed to determine whether it was white (value of 0) or black (value of 255). The test was made to confirm that the binarization had been successful and whether any possible subsequent treatment can rely on the fact the image is truly binary.
-
-
-
-By anticipating how the end-user might use the code and its environment, testing decreases the likelihood of unexpected errors. 
-
+\input{Texts/5-Methodology/6-Methodology_test}
 
 
 \end{enumerate}
